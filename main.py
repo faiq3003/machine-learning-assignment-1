@@ -27,7 +27,7 @@ def run_9_experiments():
             criterion = nn.CrossEntropyLoss()
 
             start_t = time.time()
-            # Running for 5 epochs so you can actually see the "Learning Curve"
+            # Running for 5 epochs 
             for epoch in range(1, 6):
                 model.train()
                 running_loss = 0.0
@@ -73,7 +73,7 @@ def run_9_experiments():
     return final_results
 
 if __name__ == "__main__":
-    # Execute experiments and capture the return value
+    #capture the return value
     results_data = run_9_experiments()
 
     # Final Table Printout
