@@ -33,7 +33,6 @@ def get_data(name, batch_size):
         return DataLoader(train_ds, batch_size, shuffle=True), DataLoader(test_ds, batch_size), 16, 1, 2, 4
 
     elif name == "PCam":
-        # PCam images are 96x96. We resize to 32x32 so the CNN architecture remains consistent across experiments
         t = transforms.Compose([
             transforms.Resize((32, 32)),
             transforms.ToTensor(),
@@ -41,7 +40,6 @@ def get_data(name, batch_size):
         ])
         
         print("Loading PCam... This may take a while if downloading for the first time.")
-        # PCam uses 'split' instead of 'train'
         full_train = datasets.PCAM('./data', split='train', download=True, transform=t)
         full_test = datasets.PCAM('./data', split='test', download=True, transform=t)
         
