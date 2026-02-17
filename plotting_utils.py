@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-# Your actual data extracted from the console logs
+#  actual data extracted from the console logs
 data = {
     "Adult": {
         "MLP": {"train": [83.28, 84.47, 84.80, 84.89, 85.02], "test": 84.92},
